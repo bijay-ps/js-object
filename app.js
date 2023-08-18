@@ -9,15 +9,14 @@ const person = {
     apartment: "abc",
     pincode: 123456,
   },
-  greet: function () {
-    console.log("Hello");
-  },
 };
 
+const res = JSON.stringify(person);
+console.log(res);
 person.age = 30;
-console.log(person);
+console.log(JSON.parse(res));
 
-person.greet(); // dot notation for calling the function
+// person.greet(); // dot notation for calling the function
 
 person["greet"]();
 
