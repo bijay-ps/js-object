@@ -9,14 +9,19 @@ const person = {
     apartment: "abc",
     pincode: 123456,
   },
+  greet: function() {
+    console.log(`Hello my name is ${this.name}`)
+  }
 };
 
-const res = JSON.stringify(person);
-console.log(res);
-person.age = 30;
-console.log(JSON.parse(res));
+// this represents the current working object
 
-// person.greet(); // dot notation for calling the function
+// const res = JSON.stringify(person);
+// console.log(res);
+// person.age = 30;
+// console.log(JSON.parse(res));
+
+person.greet(); // dot notation for calling the function
 
 person["greet"]();
 
@@ -58,9 +63,9 @@ let mathConsts = {
 };
 Object.freeze(mathConsts);
 mathConsts.pi = 3.145169;
-console.log(mathConsts);
+// console.log(mathConsts);
 
 const obj1 = { a: 1, b: 2 };
 const obj2 = { b: 3, c: 4 };
 Object.assign(obj1, obj2);
-console.log(obj1);
+// console.log(obj1);

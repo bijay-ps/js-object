@@ -3,9 +3,9 @@ const req = {
   userId: 123,
 };
 
-// console.log(req);
+console.log(req);
 const result = JSON.stringify(req);
-// console.log(result);
+console.log(result);
 
 const res = {
   res_code: 200,
